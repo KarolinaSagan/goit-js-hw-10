@@ -1,0 +1,51 @@
+.breed-select {
+  max-width: 500px;
+  margin: 50px auto;
+}
+
+.cat-info {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin: 10px auto;
+  width: 1200px;
+}
+
+.error {
+  color: rgba(255, 0, 0, 0.707);
+}
+
+.js-cat-img {
+  width: 60%;
+  border-radius: 30%;
+}
+
+.loader {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.loader:before,
+.loader:after {
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3) inset;
+  border-radius: 50%;
+}
+.loader:after {
+  box-shadow: 0 2px 0 #ff3d00 inset;
+  animation: rotate 2s linear infinite;
+}
+
+.is-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+}
