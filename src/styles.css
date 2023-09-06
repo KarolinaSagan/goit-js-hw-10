@@ -21,20 +21,40 @@
 }
 
 .loader {
-  text-align: center;
-  margin: 0 auto;
+  font-size: 0px;
+  width: 48px;
+  height: 48px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+  position: absolute;
+  left: 50%;
+  top: 50%;
 }
 
-.loader:before,
-.loader:after {
+.loader::after {
+  content: '';
+  box-sizing: border-box;
   position: absolute;
-  inset: 0;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3) inset;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  border: 3px solid;
+  border-color: #ff3d00 transparent;
 }
-.loader:after {
-  box-shadow: 0 2px 0 #ff3d00 inset;
-  animation: rotate 2s linear infinite;
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .is-hidden {
